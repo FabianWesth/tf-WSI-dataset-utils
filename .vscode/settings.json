@@ -1,0 +1,22 @@
+{
+    "python.pythonPath": "/home/fabian/UKE_projects/CPC/weakly-supervised-learning/.venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "editor.rulers": [
+        {
+            "column": 120,
+            "color": "#CCCCCC"
+        }
+    ],
+    "python.formatting.provider": "black", // "autopep8"
+    // "python.formatting.autopep8Args": [
+    //     "--max-line-length",
+    //     "100",
+    //     "--experimental"
+    // ],
+    "python.formatting.blackArgs": [
+        "--line-length=120",
+        // "--experimental-string-processing"
+    ],
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+}
