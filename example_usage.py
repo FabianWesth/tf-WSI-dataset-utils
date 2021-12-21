@@ -14,7 +14,7 @@ def get_immediate_files(mypath):
 
 
 def input_setup(
-    batch_size=32, dataset_dir="/home/fabian/UKE_projects/CPC/data/AIH_DILI/liver_cleaned/WSI/AIH/", wsi_ext=".svs"
+    batch_size=1, dataset_dir="/home/fabian/UKE_projects/CPC/data/AIH_DILI/liver_cleaned/WSI/AIH/", wsi_ext=".svs"
 ):
 
     """
@@ -53,11 +53,12 @@ def input_setup(
     # iterator = tf.data.Iterator.from_structure(wsi_dataset.output_types, wsi_dataset.output_shapes)
     # training_init_op = iterator.make_initializer(wsi_dataset)
     # get_input = iterator.get_next()
-    for wsi in wsi_dataset:
-        print(wsi)
 
-    # wsi_dataset_iter = iter(wsi_dataset)
-    # pos_batch = wsi_dataset_iter.get_next()
+    # for wsi in wsi_dataset:
+    #     print(wsi)
+
+    wsi_dataset_iter = iter(wsi_dataset)
+    pos_batch = wsi_dataset_iter.get_next()
 
     """
     to use run:

@@ -22,17 +22,7 @@ def save_wsi_thumbnail_mask(filename):
     except:
         filename = filename
 
-    print(filename)
     wsi = openslide.OpenSlide(filename)
-
-    # try:
-    #     print(f"Trying 3: {filename.decode()}")
-    #     wsi = openslide.OpenSlide(filename.decode())
-    #     print(f"Success 3: {filename.decode()}")
-    # except:
-    #     print(f"Trying 4: {filename}")
-    #     wsi = openslide.OpenSlide(filename)
-    #     print(f"Success 4: {filename}")
 
     def find_tissue_mask():
         thumbnail = wsi.get_thumbnail((thumbnail_size, thumbnail_size))
